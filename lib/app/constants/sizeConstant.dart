@@ -120,12 +120,10 @@ CachedNetworkImage getImageByLink(
     placeholder: (context, url) => Container(
       height: height,
       width: width,
-      child: Image.network(
-          "https://removal.ai/wp-content/uploads/2021/02/no-img.png"),
+      child: Image.asset("assets/images/no_image.png"),
     ),
     errorWidget: (context, url, error) => Image(
-        image: NetworkImage(
-            "https://www.acresninches.com/images/1575881519_paramountgroup.jpg"),
+        image: AssetImage("assets/images/image_not_found.jpg"),
         height: height,
         fit: boxFit),
   );
