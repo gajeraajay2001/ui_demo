@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ui_task/app/model/data_response_model.dart';
-
 import '../../../../constants/sizeConstant.dart';
 import '../../../../theme/theme_helper.dart';
 
@@ -16,11 +15,16 @@ class MainImageViewWidget extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          getImageByLink(
-            url: properties.propertyImages![0].path.toString(),
-            height: MySize.safeHeight! + MySize.getHeight(3),
-            width: MySize.safeWidth!,
-            boxFit: BoxFit.cover,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(
+              MySize.getHeight(20),
+            ),
+            child: getImageByLink(
+              url: properties.propertyImages![0].path.toString(),
+              height: MySize.safeHeight! + MySize.getHeight(3),
+              width: MySize.safeWidth!,
+              boxFit: BoxFit.cover,
+            ),
           ),
           Container(
             height: MySize.safeHeight! + MySize.getHeight(3),
@@ -79,6 +83,24 @@ class MainImageViewWidget extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                Spacing.height(5),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Icon(
+                    Icons.send,
+                    color: Colors.white,
+                    size: MySize.getHeight(30),
+                  ),
+                ),
+                Spacing.height(10),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Icon(
+                    Icons.play_arrow,
+                    color: Colors.white,
+                    size: MySize.getHeight(40),
+                  ),
                 ),
                 Spacer(),
                 Text(

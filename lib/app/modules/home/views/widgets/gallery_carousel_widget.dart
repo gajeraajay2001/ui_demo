@@ -2,7 +2,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_task/app/model/data_response_model.dart';
-import 'package:ui_task/app/modules/home/controllers/home_controller.dart';
 
 import '../../../../constants/sizeConstant.dart';
 import '../../../../theme/theme_helper.dart';
@@ -67,6 +66,8 @@ class _GalleryCarouselWidgetState extends State<GalleryCarouselWidget> {
                         bottom: MySize.getHeight(20),
                         child: DotsIndicator(
                           dotsCount: widget.propertyImages.length,
+                          decorator: DotsDecorator(
+                              activeColor: Colors.white, color: Colors.grey),
                           position: double.parse(currentIndexOfCard.toString()),
                         )),
                 ],

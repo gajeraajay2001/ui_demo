@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 import 'package:ui_task/app/constants/sizeConstant.dart';
 import 'package:ui_task/app/modules/home/views/widgets/card_view_widget.dart';
-
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetWidget<HomeController> {
